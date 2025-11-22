@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Treasure Trail - Jungle Pirate (Upgraded)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/brand.png" alt="logo" class="logo"/>
+      <h1>Treasure Trail</h1>
+      <p class="tag">Jungle & Pirate — Hybrid Upgrade</p>
+    </div>
+    <div class="controls-top">
+      <label for="players">Players</label>
+      <select id="players">
+        <option value="2">2 Players</option>
+        <option value="3">3 Players</option>
+        <option value="4">4 Players</option>
+      </select>
+      <button id="restart">↺ Restart</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="board-wrap">
+      <div id="board" class="board" aria-hidden="false"></div>
+      <div id="overlay" class="overlay"></div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="info">
+        <div id="turnIndicator" class="turn">Turn: <span id="currentName">-</span></div>
+        <div id="status" class="status">Click Roll to start.</div>
+      </div>
+
+      <div class="diceArea">
+        <div id="dice" class="dice">🎲</div>
+        <button id="rollBtn" class="roll">Roll</button>
+      </div>
+
+      <div class="legend">
+        <h4>Tiles</h4>
+        <div class="leg-row"><span class="tile-sample">🌿</span> Normal</div>
+        <div class="leg-row"><span class="tile-sample">💰</span> Treasure (+1)</div>
+        <div class="leg-row"><span class="tile-sample">🪤</span> Trap (skip)</div>
+        <div class="leg-row"><span class="tile-sample">❓</span> Mystery</div>
+        <div class="leg-row"><span class="tile-sample">🏴‍☠️</span> Goal</div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <small>Upgraded prototype — hybrid jungle & pirate theme.</small>
+  </footer>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
